@@ -1,0 +1,86 @@
+Q1 - What is the default value of array for different data types ? 
+
+ANS - In Java, arrays are initialized with default values depending on their data types. Here are the default values for different data types:
+
+  * Numeric types (byte, short, int, long, float, double): Default to 0.
+  * Boolean type (boolean): Default to false.
+  * Char type (char): Default to '\u0000', which is the Unicode representation of the null character.
+  * Object references (including arrays of objects): Default to null.
+
+Q2 - Can you pass the negative number in array size ? 
+
+ANs -  There's no direct support for negative indexing in java .
+
+Q3 - Where does array stored in JVM memory ?
+
+ANS -  In Java, arrays are stored in the heap memory managed by the Java Virtual Machine (JVM). 
+
+Q4 - What are the disadvantages of arrays ?
+
+ANS - Fixed Size: Arrays in Java have a fixed size, meaning once created, their size cannot be changed. This can be inconvenient when the size of the data is not known in advance or when dynamic resizing is required.
+
+No Built-in Methods: Arrays in Java do not have built-in methods for common operations like sorting, searching, or resizing. Developers often need to implement these functionalities manually or use utility classes from libraries like java.util.Arrays.
+
+Primitive Type Limitations: Java arrays can only hold elements of the same primitive type or object references. This limitation can be restrictive in scenarios where heterogeneous data needs to be stored.
+
+No Automatic Bounds Checking: Java arrays do not perform automatic bounds checking. If you try to access an index outside the array bounds, it will result in an ArrayIndexOutOfBoundsException at runtime.
+
+Lack of Type Safety: Java arrays are not type-safe at runtime. It's possible to store elements of different types in the same array, which can lead to runtime errors if the wrong type is accessed.
+
+
+Q5 - what is an anonymous array ? Give an example ?
+
+ANS -  We  can  anonymous arrays by directly specifying their contents without explicitly declaring the array variable. 
+
+
+Example - 
+
+public class AnonymousArrayExample {
+    public static void main(String[] args) {
+        printArray(new int[]{1, 2, 3, 4, 5});
+       
+        printStrings(new String[]{"Hello", "World"});
+    }
+    
+    
+    public static void printArray(int[] arr) {
+        System.out.print("Array elements: ");
+        for (int i : arr) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+    
+    
+    public static void printStrings(String[] arr) {
+        System.out.print("String array elements: ");
+        for (String s : arr) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+Q6 - What are the different ways to transverse an array ?
+
+ANS - In Java, there are several ways to traverse (or iterate over) an array, depending on the requirements and preferences of the developer. 
+
+ * For Loop: Using a traditional for loop to iterate over the elements of the array.
+
+
+ * Enhanced For Loop (for-each loop): A concise way to iterate over each element of the array without needing an explicit counter variable.
+
+
+ * Using Arrays.stream(): Java 8 introduced the Streams API, allowing for more functional-style programming. You can convert an array to a stream and then perform operations like forEach().
+
+ * Using Iterator: If you need more control or want to modify elements during traversal, you can use an Iterator.
+
+
+Q7 - What is difference between LENGTH and LENGTH() in java ?
+
+ANS - LENGTH - 
+	It is a property of the array type class.
+
+      LENGTH()-
+	It is a method of string class. 
